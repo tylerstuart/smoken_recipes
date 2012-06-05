@@ -13,7 +13,12 @@
 */
 
 .container {
-	width: 710px;
+	width: 96%;
+	min-width: 740px;
+	max-width: 1200px;
+	padding: 0 10px;
+	margin: 0 auto;
+	position: static;
 }
 
 body {
@@ -65,7 +70,6 @@ nav {
 nav {
 	background-color: white;
 	padding: 0 0.7em;
-	white-space: no wrap;
 }
 
 nav ul {
@@ -137,7 +141,7 @@ table.profile {
 }
 
 td.main {
-	width: 70%;
+	width: 80%;
 	padding: 1em;
 }
 
@@ -201,10 +205,114 @@ ul.users {
 	list-style: none;
 }
 
+h1.recipe {
+  margin-bottom: 0.3em;
+}
 
+table.recipes {
+  margin-top: 1em;
+}
 
+table.recipes tr {
+  height: 70px;
+}
 
+table.recipes tr  {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
 
+table.recipes tr td.recipe {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.recipes tr td.recipe span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+
+}
+
+div.user_info span.recipes {
+  font-size: 80%;
+}
+
+form.new_recipe {
+  margin-bottom: 2em;
+}
+
+form.new_recipe textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+
+/* java dropdown */
+ul.menu {
+	list-style:none; 
+	margin:0; 
+	padding:0;
+}
+
+ul.menu * {
+	margin:0; 
+}
+
+ul.menu a {
+	display:block; 
+	color:#000; 
+	text-decoration:none;
+}
+
+ul.menu li {
+	position:relative;
+	margin-right:2px;
+}
+ul.menu ul {
+	position:absolute; 
+	top:26px; 
+	left:0; 
+	background:#d1d1d1; 
+	display:none; 
+	opacity:0; 
+	list-style:none;
+}
+ul.menu ul li {
+	position:relative; 
+	border:1px solid #aaa;
+	border-top:none; 
+	width:148px; 
+	margin:0;
+}
+ul.menu ul li a {
+	display:block; 
+	padding:3px 7px 5px; 
+	background-color:#d1d1d1;
+}
+ul.menu ul li a:hover {
+	background-color:#c5c5c5;
+}
+ul.menu ul ul {
+	left:148px; 
+	top:-1px;
+}
+/*ul.menu .menulink {border:1px solid #aaa; padding:5px 7px 7px; font-weight:bold; background:url(images/header.gif); width:134px}
+ul.menu .menulink:hover, ul.menu .menuhover {background:url(images/header_over.gif)}
+ul.menu .sub {background:#d1d1d1 url(images/arrow.gif) 136px 8px no-repeat}
+ul.menu .topline {border-top:1px solid #aaa}*/
 
 
 

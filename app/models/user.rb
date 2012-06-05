@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :email, :name, :password, :password_confirmation
 
+  has_many :recipes, :dependent => :destroy
+
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name,  :presence    => true,
@@ -27,6 +29,10 @@ class User < ActiveRecord::Base
   def self.authenticate_with_salt(id, cookie_salt)
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
+  end
+
+  def feed
+    Recipe.where("user_id = ?", id)
   end
 
   private

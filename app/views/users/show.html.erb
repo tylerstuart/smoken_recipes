@@ -1,13 +1,20 @@
 <table class="profile" summary="profile information" >
   <tr>
-  	<td>
+  	<td class="main">
       <h1>
         <%= @user.name %>
       </h1>
+      <% unless @user.recipes.empty? %>
+        <table class="recipes" summary="User recipes">
+          <%= render @recipes %>
+        </table>
+        <%= will_paginate @recipes %>
+      <% end %>
     </td>
     <td class="sidebar round">
     	<strong>Name</strong> <%= @user.name %><br />
-    	<strong>URL</strong> <%= link_to user_path(@user), @user %>
+    	<strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+      <strong>Recipes</strong> <%= @user.recipes.count %>
     </td>
   </tr>
 </table>
